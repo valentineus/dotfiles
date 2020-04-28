@@ -1,0 +1,3 @@
+# Samsung NP300U1A
+
+Coming soon...
