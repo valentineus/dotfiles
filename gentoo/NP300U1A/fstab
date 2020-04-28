@@ -1,0 +1,12 @@
+# Main sections
+PARTUUID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx   /           btrfs   compress=zstd,discard,noatime,nodiratime,space_cache,ssd_spread 0 1
+PARTUUID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx   /boot/efi   vfat    defaults            0 2
+PARTUUID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx   none        swap    defaults,discard    0 0
+
+# System sections
+proc    /proc   proc    nosuid,noexec,nodev 0 0
+sysfs   /sys    sysfs   nosuid,noexec,nodev 0 0
+
+# TMPFS sections
+tmpfs   /var/tmp    tmpfs   nodev,nosuid,size=75%   0 0
+tmpfs   /tmp        tmpfs   nodev,nosuid,size=50%   0 0
